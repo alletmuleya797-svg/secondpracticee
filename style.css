@@ -1,0 +1,476 @@
+:root{
+    --primary-color: #2c3855;
+    --primary-color-dark: #435681;
+    --text-dak: #333333;
+    --text-light: #767268;
+    --extra-light: #f3f4f6;
+    --white: #ffffff;
+    --max-width: 1200px;
+}
+/*EDITED*/
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/*EDITED*/
+.section__container{
+    max-width: var(--max-width);
+    margin: auto;
+    padding: 5rem 1rem;
+}
+/*EDITED*/
+.section__header{
+   font-size: 2rem;
+   font-weight: 600;
+   color: var(--text-dark)
+   text-align: center; 
+}
+
+/*EDITED*/
+a {
+   text-decoration: none;
+}
+img{
+    width: 100;
+    display: flex;
+}
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4; /* Light background color */
+}
+
+/*EDITED*/
+nav{
+    max-width: var(--max-width);
+    margin: auto;
+    padding: 2rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+header {
+    background-color: #007bff; /* Header background color */
+    color: white;
+    padding: 20px;
+    text-align: left;
+}
+
+   .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0056b3; /* Change to the desired color */
+    padding: 10px 20px;
+}
+
+.nav-item {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+.nav-button {
+    background-color: white; /* Make it transparent */
+    color: #007bff; /* Change to the desired blue color */
+    border: 2px solid #007bff; /* Add border with the same blue color */
+    padding: 8px 16px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-left: 10px;
+    transition: background-color 0.3s, color 0.3s; /* Add transition for hover effect */
+}
+
+.currency-language {
+    color: white;
+    margin-right: 15px;
+}
+nav a:hover {
+    background-color: #007bff; /* Background color on hover */
+    color: white; /* Text color on hover */
+}
+.search-bar-container {
+    display: flex; /* Use Flexbox for horizontal alignment */
+    align-items: center; /* Vertically align items in the center */
+    width: 100%;
+    max-width: 1200px; /* Adjust as needed */
+    height: 60px; /* Fixed height for the bar */
+    border: 4px solid #ffb700; /* The prominent yellow border */
+    border-radius: 4px; /* Slight rounding of the corners */
+    overflow: hidden; /* Important for containing the button and inner elements */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    font-size: 16px;
+}
+
+/* --- Individual Search Items (Destination, Dates, Guests) --- */
+
+.search-bar-item {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 0 15px;
+    background-color: white;
+    color: #333;
+    cursor: pointer;
+    white-space: nowrap; /* Prevents text from wrapping */
+}
+
+/* Sizing the sections: Destination and Dates take up most space */
+.destination {
+    flex-grow: 1.5; /* Takes up more space */
+    min-width: 250px;
+}
+
+.dates {
+    flex-grow: 1.5; /* Takes up more space */
+    min-width: 300px;
+}
+
+.guests {
+    flex-grow: 1; /* Takes up less space than the other two */
+    min-width: 220px;
+}
+
+/* Separators (simulating subtle borders between fields) */
+.destination, .dates {
+    border-right: 1px solid #ddd;
+}
+
+
+/* --- Icons and Text within Items --- */
+
+.search-bar-item i {
+    color: #0071c2; /* Blue icon color */
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+/* Styling for the Destination Input Field */
+.destination input {
+    border: none;
+    outline: none;
+    flex-grow: 1;
+    font-size: 16px;
+    padding: 0;
+    color: #333;
+}
+
+.destination input::placeholder {
+    color: #999;
+}
+
+/* Close/Clear Button */
+.clear-input {
+    font-size: 24px;
+    color: #999;
+    margin-left: 10px;
+    cursor: pointer;
+    line-height: 1; /* Ensure vertical alignment is correct */
+}
+
+/* The Down Arrow in the Guests section */
+.guests .fa-chevron-down {
+    margin-left: 10px;
+    margin-right: 0;
+    font-size: 12px;
+    color: #333; /* Darker color for the arrow */
+}
+
+
+/* --- Search Button --- */
+
+.search-button {
+    background-color: #0071c2; /* The prominent blue background */
+    color: white;
+    border: none;
+    height: 100%;
+    padding: 0 25px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s; /* Smooth transition for hover effect */
+    flex-shrink: 0; /* Prevents the button from shrinking */
+}
+
+.search-button:hover {
+    background-color: #A4D4E1; /* Darken on hover */
+}
+footer {
+    text-align: center;
+    margin-top: 30px; /* More space above footer */
+    font-size: 12px;
+}
+
+/* --- Combined Blue Navigation Bar --- */
+/* --- Combined Blue Navigation Bar (General Container) --- */
+
+.blue-navbar-combined {
+    background-color: #333; /* The prominent blue background color */
+    color: white;
+    padding: 15px 25px;
+    height: 70px; 
+    display: flex;
+    align-items: center; 
+    justify-content: space-between; 
+    font-family: Arial, sans-serif;
+    gap: 20px; 
+}
+
+/* 1. Logo Styling (BA TONGA VILLA) */
+.navbar-logo {
+    background-color: white;
+    color: #333;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 8px 15px;
+    border-radius: 4px;
+    flex-shrink: 0; 
+    display: flex;
+    align-items: center;
+}
+
+/* 2. Welcome Message */
+.navbar-welcome {
+    color: white;
+    font-size: 16px;
+    font-weight: normal;
+    flex-grow: 1; /* Pushes content away from logo/nav */
+}
+
+/* 3. Navigation List Container */
+.navbar-nav {
+    flex-shrink: 0;
+}
+
+.navbar-nav ul {
+    list-style: none; /* REMOVES the bullet points */
+    display: flex; /* MAKES the list items horizontal */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    gap: 20px; /* Space between each navigation item */
+}
+
+.navbar-nav ul li a {
+    text-decoration: none;
+    color: white; /* White text color for links */
+    font-size: 16px;
+    font-weight: 500;
+    padding: 5px 0; /* Optional: adds a little vertical padding */
+    border-bottom: 2px solid transparent; /* Prepare for hover effect */
+    transition: border-bottom 0.2s;
+}
+
+.navbar-nav ul li a:hover {
+    border-bottom: 2px solid white; /* Underline effect on hover */
+}
+
+
+/* 4. Auth Buttons Container (Register/Sign In) */
+.navbar-auth-buttons {
+    display: flex;
+    gap: 10px;
+    flex-shrink: 0;
+}
+
+/* Register/Sign In Button Styling */
+.auth-button {
+    border: none;
+    padding: 8px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: opacity 0.2s;
+}
+
+.auth-button:hover {
+    opacity: 0.9;
+}
+
+.auth-button.register {
+    background-color: white;
+    color: #007bff;
+}
+
+.auth-button.signin {
+    background-color: #007bff;
+    color: white;
+    border: 1px solid white;
+}
+
+.header__container{
+    padding: 1rem 1rem 5rem 1rem;
+}
+.header__image__container{
+    position: relative;
+    min-height: 500px;
+    background-image: linear-gradient(to right, rgba(44,56,85,.9), rgba(100,125,187,.1)),
+    url('images/Villa5.jpg');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 2rem;
+}
+.header__content h1{
+    margin-bottom: 1rem;
+    font-size: 3rem;
+    line-height: 4rem;
+    font-weight: 600;
+    color: var(--white);
+}
+.header__content h2{
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+    line-height: 4rem;
+    font-weight: 600;
+    color: var(--white);
+}
+.header__content p{
+    color: var(--extra-light);
+}
+.booking__content p{
+   position: absolute;
+   bottom: -5rem; 
+   left: 50%;
+   transform: translateX(-50%);
+   width: calc(100% - 6rem);
+   display: flex;
+   align-items: center;
+   gap: 1rem;
+   padding: 3rem 2rem;
+   background-color: rgba(255, 255, 255, 0.7);
+   -webkit-backdrop-filter: blur(10px);
+   backdrop-filter: blur(10px);
+   box-shadow: 5px 5px 30px; rgba(0, 0, 0, 0.1);
+}
+
+.booking__content{
+    width: 100%;
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+
+/*EDITED*/
+.booking__container{
+    position: absolute;
+    bottom: -5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 6rem);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 3rem 2rem;
+    border-radius: 2rem;
+    background-color: rgba(255, 255, 255, 0.7);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.1);
+}
+
+/*EDITED*/
+.booking__container form{
+    width: 100%;
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+
+.booking__container .input__group{
+    width: 100%;
+    position: relative;
+}
+
+.booking__container label{
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    transform: translateY(-50%);
+    font-weight: 500;
+    font-size: 1.2rem;
+    color: var(--text-dark);
+    pointer-events: none;
+    transition: 0.3s;
+}
+
+.booking__container input{
+   width: 100%;
+   padding: 10px 0;
+   font-size: 1rem;
+   outline: none;
+   border: none; 
+   background-color: transparent;
+   border-bottom: 1px solid var(--primary-color);
+   color: var(--text-dark);
+}
+
+.booking__container input:focus ~ label{
+  font-size: 0.8rem;
+  top: 0;  
+}
+
+.booking__container .form__group p{
+    margin-top: 0.5rem;
+    font-size: 0.8rem;
+    color: var(--text-light);
+}
+
+.booking__container .btn {
+    padding: 1rem;
+    outline: none;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--white);
+    background-color: var(--primary-color);
+    border-radius: 100%;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.booking__container .btn:hover{
+
+}
+
+.forms-container {
+    margin-top: 20px;
+}
+.header__content{
+    max-width: 600;
+    padding: 5rem 2rem;
+}
+
+.form {
+    border: 1px solid #ccc;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+}
+
+
+/*EDITED SECTION FOR LINKS FUNCTIONALITY*/
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+section {
+    display: none;
+    padding: 20px;
+}
+
+.active {
+    display: block;
+}
+
+.hidden {
+    display: none;
+}

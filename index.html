@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Page</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+	<nav class="navbar">
+        <div class="navbar-left">
+        <a href="#" class="nav-item"></i>Home</a>
+        <a href="#" class="nav-item">Rooms</a>
+        <a href="#" class="nav-item">Facilities</a>
+        <a href="#" class="nav-item">About Us</a>
+        <a href="#" class="nav-item">Contact Us</a>
+    </div>
+    <div class="navbar-right">
+        <div class="currency-language">
+
+        </div>
+        <a href="#" class="nav-button" id="registerLink">Register</a>
+        <a href="#" class="nav-button"id="signinLink">Sign in</a>
+    </div>
+</nav>
+<header class="section__container header__container">
+    <div class="header__image__container">
+        <div class="header__content">
+            <h1>Welcome To BaTonga Villa.  Twamutambula!</h1>
+            <h2>Enjoy Your Dream Vacation</h2>
+            <p>Book Lodges, Taxis and stay packages at negotiatable price</p>
+        </div>
+        <div class="booking__container"> 
+            <form>
+                <div class="form__group">
+                    <div class="input__group">
+                       <input type="text">
+                       <label>Location</label>
+                    </div>
+                    <p>where are you?</p>
+                </div>
+                <div class="form__group">
+                    <div class="input__group">
+                       <input type="text">
+                       <label>Check In</label>
+                    </div>
+                    <p>Add date</p>
+                </div>
+                <div class="form__group">
+                    <div class="input__group">
+                       <input type="text">
+                       <label>Check Out</label>
+                    </div>
+                    <p>Add date</p>
+                </div>
+                <div class="form__group">
+                    <div class="input__group">
+                       <input type="text">
+                       <label>Guests</label>
+                    </div>
+                    <p>Add guests</p>
+                </div>
+            </form>
+            <button class="btn"><i class="ri-search-line"></i></button>
+        </div>
+    </div>
+   
+    <!--EDITED SECTION FOR LINKS FUNCTIONALITY
+        <section id="rooms" class="hidden">
+            <h2>Available Rooms</h2>
+            <div class="gallery">
+                <div class="slide" id="room1">
+                    <img src="images/BaTongaVillA3.jpg" alt="Room 1">
+                    <p>Room 1 Description</p>
+                </div>
+                <div class="slide" id="room2">
+                    <img src="images/BaTonga Villa1.jpg" alt="Room 2">
+                    <p>Room 2 Description</p>
+                </div>
+                <div class="slide" id="room3">
+                    <img src="images/BaTonga Villa2.jpg" alt="Room 3">
+                    <p>Room 3 Description</p>
+                </div>
+                <div class="slide" id="room3">
+                    <img src="images/BaTonga Villa2.jpg" alt="Room 4">
+                    <p>Room 4 Description</p>
+                </div>
+            </div>
+            <button onclick="prevSlide()">Previous</button>
+            <button onclick="nextSlide()">Next</button>
+        </section>
+
+        <section id="facilities" class="hidden">
+            <h2>Our Facilities</h2>
+            <p>Details about facilities...</p>
+        </section>
+
+        <section id="about" class="hidden">
+            <h2>About Us</h2>
+            <p>Information about the lodge...</p>
+        </section>
+
+        <section id="contact" class="hidden">
+            <h2>Contact Us</h2>
+            <p>Contact information...</p>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+     -->
+
+    <main>
+        <h1>Our Available Rooms</h1>
+        <div class="slider-container">
+            <div class="room-gallery">
+                <img id="room-image" src="images/room1.jpg" alt="A lovely room at BaTonga Villa">
+                <div id="room-description">Luxury Suite</div>
+            </div>
+            
+            <div class="slider-controls">
+                <button id="prev-btn">Previous</button>
+                <button id="next-btn">Next</button>
+            </div>
+        </div>
+        </main>
+
+    <script src="rooms_slider.js"></script>
+</header>
+        <!-- Forms for Registration and Sign In -->
+<div id="forms-container" style="display: none;">
+    <div id="register-form" style="display: none;">
+        <h2>Register</h2>
+        <form>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            <br>
+            <label for="email">Email/Contact:</label>
+            <input type="email" id="email" name="email" required>
+            <br>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <div id="signin-form" style="display: none;">
+        <h2>Sign In</h2>
+        <form>
+            <label for="signin-email">Email:</label>
+            <input type="email" id="signin-email" name="email" required>
+            <br>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <br>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</div>
+    <footer>
+        <p>© 2025 BaTonga BookingSystem.com</p>
+    </footer>
+        <script>
+        document.getElementById('registerLink').addEventListener('click', function(event) {
+            event.preventDefault();
+            document.querySelector('.search-container').classList.add('hidden');
+            document.getElementById('registrationForm').classList.remove('hidden');
+        });
+    </script>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+   <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const registerLink = document.getElementById('registerLink');
+        const signinLink = document.getElementById('signinLink');
+        const registerForm = document.getElementById('register-form');
+        const signinForm = document.getElementById('signin-form');
+        const formsContainer = document.getElementById('forms-container');
+
+        // Hide forms initially
+        formsContainer.style.display = 'none';
+
+        registerLink.addEventListener('click', function(event) {
+            event.preventDefault(); // Prevent page refresh
+            formsContainer.style.display = 'block'; // Show forms container
+            registerForm.style.display = 'block'; // Show register form
+            signinForm.style.display = 'none'; // Hide sign-in form
+          });
+
+        signinLink.addEventListener('click', function(event) {
+            event.preventDefault(); // Prevent page refresh
+            formsContainer.style.display = 'block'; // Show forms container
+            signinForm.style.display = 'block'; // Show sign-in form
+            registerForm.style.display = 'none'; // Hide register form
+          });
+        });
+    </script>
+</body>
+</html>
